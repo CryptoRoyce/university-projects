@@ -126,18 +126,3 @@ int main(void){
 
     return 0;
 }
-
-
-/*
-
-I'm having a lot of trouble planning out the design before creating the program.
-When I am trying to design the program, I end up writing out a bunch of ideas and thinking about how I may make it work.
-It's always theory on if my ideas will work or not because sometimes I have to do research on how to get something done proper.
-I accomplish a lot more, if I write out everything that I know will be required in my program first.
-Then I figure out what else I need and what I don't yet know how to make work.
-If I try to make a design on paper, I end up missing 50% of what I'm actually putting into the program.
-You'll see my ending design in class tomorrow though.
-I've been putting a lot of comments explaining what I'm doing, so hopefully that helps my cause.
-
-
-*/

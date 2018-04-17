@@ -1,0 +1,28 @@
+The Problem
+
+Read an integer from the keyboard, then use the random number function to create an array of numbers. Calculate the values required for the output.
+
+Input
+
+A single positive integer entered from the keyboard to designate the quantity of numbers to put in the array.
+
+Output
+
+the numbers in the array,
+the mean,
+the maximum and it index in the array, and
+the minumum and it index in the array.
+Example (This sample data provided so you can test your program.)
+
+If the input number is:
+
+6
+
+The output might be:
+
+The array = {2, 5, 3, 1, 6, 4}
+Mean = 3.5
+Max = 6 (index 4)
+Min = 1 (index 3)
+
+Note: the actual output will depend on which numbers are generated during execution.

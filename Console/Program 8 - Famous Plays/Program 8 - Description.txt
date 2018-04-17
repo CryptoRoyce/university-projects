@@ -1,0 +1,98 @@
+The Problem
+
+You are part of a company writing a spreadsheet program. As you know, spreadsheets can be sorted on any column. You're part of the project is to write one binary tree function to sort the data [Hint: use different fields when inserting nodes in the tree.] and a second function to list it in either an ascending or descending sequence. [Note: Each of these functions may actually need to be a set of related functions.]
+
+For sample data you will have a disk file containing information about Shakespeare's plays. Your first function should create a tree based on the sort selected by the user and the second function to display the data in the sequence selected by the user. Regardless of the column being sorted, data in individual records always be displayed in the same line of the output.
+
+Input
+
+Each record will contain the following information:
+
+First Performed	9 characters
+Printed	5 characters
+Title	26 characters
+Type	7 characters
+Output
+
+Tabular output should be aligned in columns with two spaces between each. All columns should have headings. It should be sorted on the column specified by the user.
+
+Example   (This sample data provided so you can test your program.)
+
+If the data is:
+
+1595-96  1600 A Midsummer Night's Dream Comedy
+1594-95  1623 Two Gentlemen of Verona   Comedy
+1596-97  1623 King John                 History
+1597-98  1598 Henry IV, Part 1          History
+1611-12  1623 The Tempest               Comedy
+1602-03  1623 All's Well That Ends Well Comedy
+1599-16001623 As You Like It            Comedy
+1595-96  1597 Richard II                History
+1599-16001623 Twelfth Night             Comedy
+1612-13  1623 Henry VIII                History
+1594-95  1597 Romeo and Juliet          Tragedy
+1606-07  1623 Antony and Cleopatra      Tragedy
+1610-11  1623 The Winter's Tale         Comedy
+1600-01  1602 The Merry Wives of WindsorComedy
+1596-97  1600 The Merchant of Venice    Comedy
+1607-08  1623 Timon of Athens           Tragedy
+1598-99  1600 Henry V                   History
+1598-99  1600 Much Ado About Nothing    Comedy
+1593-94  1623 Taming of the Shrew       Comedy
+1597-98  1600 Henry IV, Part 2          History
+1609-10  1623 Cymbeline                 Tragedy
+1607-08  1623 Coriolanus                Tragedy
+1601-02  1609 Troilus and Cressida      Tragedy
+1608-09  1609 Pericles, Prince of Tyre  Comedy
+1590-91  1594?Henry VI, Part 3          History
+1593-94  1594 Titus Andronicus          Tragedy
+1605-06  1623 Macbeth                   Tragedy
+1591-92  1623 Henry VI, Part 1          History
+1590-91  1594?Henry VI, Part 2          History
+1600-01  1603 Hamlet                    Tragedy
+1604-05  1623 Measure for Measure       Comedy
+1604-05  1622 Othello                   Tragedy
+1592-93  1597 Richard III               History
+1605-06  1608 King Lear                 Tragedy
+1612-13  1634 The Two Noble Kinsmen     Comedy
+1599-16001623 Julius Caesar             Tragedy
+1594-95  1598?Love's Labour's Lost      Comedy
+1592-93  1623 Comedy of Errors          Comedy
+
+Source: http://www.shakespeare-online.com
+
+Possible outputs are
+
+1 - for a sort by title:
+
+ First
+Performed  Printed           Title               Type
+---------  -------  --------------------------  -------
+1595-96     1600    A Midsummer Night's Dream   Comedy
+1602-03     1623    All's Well That Ends Well   Comedy
+1606-07     1623    Antony and Cleopatra        Tragedy
+1599-1600   1623    As You Like It              Comedy
+1592-93     1623    Comedy of Errors            Comedy
+1607-08     1623    Coriolanus                  Tragedy
+1609-10     1623    Cymbeline                   Tragedy
+1600-01     1603    Hamlet                      Tragedy
+1591-92     1623    Henry VI, Part 1            History
+1590-91     1594?   Henry VI, Part 2            History
+etc.
+
+2 - for a sort by first performed:
+
+ First
+Performed  Printed           Title               Type
+---------  -------  --------------------------  -------
+1590-91     1594?   Henry VI, Part 2            History
+1590-91     1594?   Henry VI, Part 3            History
+1591-92     1623    Henry VI, Part 1            History
+1592-93     1623    Comedy of Errors            Comedy
+1592-93     1597    Richard III                 History
+1593-94     1623    Taming of the Shrew         Comedy
+1593-94     1594    Titus Andronicus            Tragedy
+1594-95     1598?   Love's Labour's Lost        Comedy
+1594-95     1597    Romeo and Juliet            Tragedy
+1594-95     1623    Two Gentlemen of Verona     Comedy
+etc.

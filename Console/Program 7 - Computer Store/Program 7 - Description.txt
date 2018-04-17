@@ -1,0 +1,100 @@
+
+The Problem
+
+Your computer store is having a sale. Your task is to design and write a program that reads customer orders from a disk file, calculates the total cost of the purchase, and writes invoice records to a second disk file.
+
+Items and the sale prices:
+
+ 	Computer, laptop	 	$525.00
+Computer, desktop	$600.00
+Printer, laser	$350.00
+Printer, ink jet	$175.00
+Monitor, LCD	$150.00
+Dual monitor package
+     (second monitor and circuit card)	$200.00
+Docking station	$75.00
+Constraints:
+
+You may not sell a docking station unless the customer buys a laptop.
+To purchase the dual monitor package, the customer must first purchase a monitor.
+A 5% discount will be given if customer purchases either of two packages:
+desktop, monitor, and printer, or
+a laptop and a printer.
+Input
+
+There will be one input record for each customer
+
+Each record will consist of eight fields separated by commas. The first field will be the customer's name, the remaining fields will be integers corresponding to the quantity of each item purchased (laptop, desktop, laser printer, ink jet printer, monitor, dual monitor, docking station).
+
+Output
+
+Output will be written to a disk file named YourName.7.txt. Replace YourName with your last name.
+For each customer, an invoice formatted as shown below in the sample output and will include:
+The customer's name, left justified
+The four column headings in two lines using the spacing shown in the sample output
+One line for each item purchased showing appropriate data in each column. Columns will be aligned as shown in the sample output
+The amount of the discount, 0 if none, aligned as shown in the sample output.
+A subtotal of the purchase price, aligned as shown in the sample output.
+The amount of sales tax calculated at 3.5%, aligned as shown in the sample output.
+The total cost of the purchase, aligned as shown in the sample output.
+Any exception to the inventory items, separated from the invoice details by a blank line.
+A line of thirty (30) dashes will be written at the end of each invoice.
+Example (This sample data is provided so you can test your program.)
+
+If the data is:
+
+John Doe,0,1,0,0,1,1,1
+Susan Smith,1,0,0,1,0,0,1
+Francais Stevens,0,1,1,0,1,1,0
+Jack Johnson,0,2,1,0,2,1,0
+
+The output should be:
+
+John Doe
+                            Unit    Extended
+Qty  Item                   Cost      Cost
+ 1   Computer, desktop     600.00    600.00
+ 1   Monitor, LCD          150.00    150.00
+ 1   Dual monitor package  200.00    200.00
+     Discount                          0.00
+     Subtotal                        950.00
+     Sales tax (3.5%)                 33.25
+     Total                           983.25
+ 
+Exception - docking station ordered without a laptop
+------------------------------
+Susan Smith
+                            Unit    Extended
+Qty  Item                   Cost      Cost
+ 1   Computer, laptop     525.00    525.00
+ 1   Printer, ink jet     175.00    175.00
+ 1   Docking station       75.00     75.00
+     Discount                        35.00
+     Subtotal                       810.00
+     Sales tax (3.5%)                28.35
+     Total                          838.35
+------------------------------
+Francais Stevens
+                            Unit    Extended
+Qty  Item                   Cost      Cost
+ 1   Computer, desktop     600.00    600.00
+ 1   Printer, laser        350.00    350.00
+ 1   Monitor, LCD          150.00    150.00
+ 1   Dual monitor package  200.00    200.00
+     Discount                         55.00
+     Subtotal                       1245.00
+     Sales tax (3.5%)                 43.58
+     Total                          1288.58
+------------------------------
+Jack Johnson
+                            Unit    Extended
+Qty  Item                   Cost      Cost
+ 2   Computer, desktop     600.00   1200.00
+ 1   Printer, laser        350.00    350.00
+ 2   Monitor, LCD          150.00    300.00
+ 1   Dual monitor package  200.00    200.00
+     Discount                         55.00
+     Subtotal                       1995.00
+     Sales tax (3.5%)                 69.83
+     Total                          2064.83
+------------------------------

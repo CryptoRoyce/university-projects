@@ -1,0 +1,40 @@
+The Problem
+
+Repeating numbers are real numbers which have sequences of digits that repeat forever. We show that by a horizontal bar over the repeating part.  
+
+      ___
+496.36279   is   496.36279279279279279 . . .
+
+Although these numbers can never be written as a finite decimal value, they can be written as the quotient of two integers.
+
+You will have an input file in which each line contains a real number and an integer; representing, respectively, the repeating decimal number and the quantity of digits that are repeated. Your task is to write a program that determines the numerator and denominator of the fraction that is equivalent to the repeating decimal number.
+
+Input
+
+A disk file containing one or more records. Each record will consist of two numeric values:
+
+a floating-point value that will be the repeating decimal, and
+an integer value that will be the number of digits that are repeated.
+Output
+
+For each input record, you should display the floating-point number as 1) a repeating decimal (a bar over the repeating part), 2) the numerator of the equivalent fraction, and 3) the denominator of the equivalent fraction.
+
+Your output should include column headings and the data in the output list should bve aligned in columns.
+
+Example (This sample data provided so you can test your program.)
+
+The test data file is:
+
+7.45656 2
+0.00345345 3
+13.00279 4
+
+The output that should be produced by the test data is:
+
+ Number     Numerator  Denominator
+      __
+ 7.45646         7382          990
+        ___
+ 0.00345345       345        99900
+    ____
+13.00279      1300149        99990

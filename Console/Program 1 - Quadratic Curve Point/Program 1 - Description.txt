@@ -1,0 +1,29 @@
+The Problem
+
+Consider the standard quadratic equation form, y = Ax2 + Bx + C.
+
+Given the values of A, B, C, and x; find and print the coordinates of the point on the curve of the equation at x.
+
+Input
+
+Data will be entered from the keyboard in sets of four numbers corresponding to A, B, C, and x.
+All input will be real numbers (not integers).
+Entry will end when all four numbers are 0.0.
+Output
+
+Your output must be printed in standard ordered pair notation, i.e., (x, y).
+Print at least one decimal place; e.g., for 43.2543 you could print 43.3, 43.25, or 43.254, etc.; for 18.0 you could print 18.0 or 18.00, etc.
+Do not print in scientific notation.
+Example (This sample data provided so you can test your program.)
+
+If the data is:
+
+3.6 5.2 -7.1 4.9
+0.0 -2.1 34.9 0.0
+0.0 0.0 0.0 0.0
+
+The output might be:
+
+(4.9, 104.8)
+(0.0, 34.9)
+

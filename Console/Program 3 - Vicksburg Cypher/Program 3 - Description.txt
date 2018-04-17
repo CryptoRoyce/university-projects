@@ -1,0 +1,91 @@
+If you make a detailed plan for this program, converting it to C language is easy.
+
+Your source code (.c file) must be submitted to the Angel Drop Box prior to class and your plan at the beginning of class on October 15th.
+
+
+The Problem
+
+Perhaps the most common cipher used by the Confederacy during the Civil War was known as the Vicksburg Cipher (Stern, Secret Missions of the Civil War). This was actually based on an older cipher, the Vigenére Tableau. It was easily remembered and simply set up (alas, it was also fairly easy to break).
+
+Begin with a table as follows:
+
+  ABCDE FGHIJ KLMNO PQRST UVWXYZ
+ 
+A ABCDE FGHIJ KLMNO PQRST UVWXYZ
+B BCDEF GHIJK LMNOP QRSTU VWXYZA
+C CDEFG HIJKL MNOPQ RSTUV WXYZAB
+D DEFGH IJKLM NOPQR STUVW XYZABC
+E EFGHI JKLMN OPQRS TUVWX YZABCD
+F FGHIJ KLMNO PQRST UVWXY ZABCDE
+G GHIJK LMNOP QRSTU VWXYZ ABCDEF
+H HIJKL MNOPQ RSTUV WXYZA BCDEFG
+I IJKLM NOPQR STUVW XYZAB CDEFGH
+J JKLMN OPQRS TUVWX YZABC DEFGHI
+K KLMNO PQRST UVWXY ZABCD EFGHIJ
+L LMNOP QRSTU VWXYZ ABCDE FGHIJK
+M MNOPQ RSTUV WXYZA BCDEF GHIJKL
+N NOPQR STUVW XYZAB CDEFG HIJKLM
+O OPQRS TUVWX YZABC DEFGH IJKLMN
+P PQRST UVWXY ZABCD EFGHI JKLMNO
+Q QRSTU VWXYZ ABCDE FGHIJ KLMNOP
+R RSTUV WXYZA BCDEF GHIJK LMNOPQ
+S STUVW XYZAB CDEFG HIJKL MNOPQR
+T TUVWX YZABC DEFGH IJKLM NOPQRS
+U UVWXY ZABCD EFGHI JKLMN OPQRST
+V VWXYZ ABCDE FGHIJ KLMNO PQRSTU
+W WXYZA BCDEF GHIJK LMNOP QRSTUV
+X XYZAB CDEFG HIJKL MNOPQ RSTUVW
+Y YZABC DEFGH IJKLM NOPQR STUVWX
+Z ZABCD EFGHI JKLMN OPQRS TUVWXY
+
+Then you and your agent must agree upon a key phrase or key word. Names of Southern generals proved to be popular choices (and hence easily guessed by the damn Yankees).
+
+Now write out your plaintext message, and below it repeat your key phrase as often as needed to cover your message; ignore any blanks or punctuation in the key phrase. At each sentence, start with the beginning of your key phrase again. So if the message was "THE ARMY MOVES AT MIDNIGHT. BE READY." and the key phrase was "STONEWALL JACKSON", you would write:
+
+THE ARMY MOVES AT MIDNIGHT. BE READY.
+STO NEWA LLJAC KS ONSTONEW. ST ONEWA.
+
+Then to encipher the message, find each letter down the leftmost column, and then locate the corresponding letter of the key phrase across the top row. Your substitution letter is found at the intersection of that row/column pair. So for the first letter, 'T', of our cipher, we find the row beginning with 'T', and the column below 'S' and find the intersection is letter 'L'. The second letter 'S' intersects with the key letter 'T' at 'A', and so on. For our sample message, the ciphertext would be:
+
+LAS NVIY XZEEU KL AVVGWTLP. BP CNAFI.
+
+To decipher the message, again repeat the key phrase as many times as needed to 'cover' the ciphertext (beginning afresh at the start of each new sentence). Now, taking each letter of the key phrase, find it across the top row of your table (identifying the column); then look down that column until you find the letter of the cipher, and then replace it with the leftmost letter of that row.
+
+Write a program that will read in and process an unspecified number of ciphers.
+
+Input
+
+The first line of data in a set will have the number 1 (encipher) or 2 (decipher) to indicate which way you need to work the table.
+
+The second line in the set will be the key phrase, such as "Stonewall Jackson".
+
+The third and final line of data in each set will be the plaintext or ciphertext message. All sentences will end with either a period or a question mark.
+
+Repeat processing until you run out of data sets. A negative number will indicate the end of the data.
+
+Ciphertext input will be fully capitalized; the key phrase and plaintext input may or may not be capitalized.
+
+Output
+
+Ciphertext or plaintext depending on the first line in the set. All output will be fully capitalized.
+
+Example (This sample data provided so you can test your program.)
+
+If the data is:
+
+2
+Stonewall Jackson
+LAS NVIY XZEEU KL AVVGWTLP. BP CNAFI.
+1
+BOBBY LEE
+We move on Lynchburg. Supplies ready?
+1
+Damnyankees
+Bring all horses you have to Gettysburg. Hurry.
+-99
+
+The output should be:
+
+THE ARMY MOVES AT MIDNIGHT. BE READY.
+XS NPTP SR MMODFMYVH. GVQNWMIT FFBBJ?
+ERUAE AYV LJJVEE LMU UKZI LR GQGRYFLYVY. KUDEW.
